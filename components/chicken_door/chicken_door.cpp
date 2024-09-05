@@ -37,7 +37,7 @@ void ChickenDoor::control(const cover::CoverCall &call) {
     ESP_LOGD(TAG, "Received position: %f", pos);
 
 
-    if (pos<0.5){
+    if (pos>0.5){
        this->motor.forward();
       this->position = 1.0;
        ESP_LOGD(TAG, "pos = 1 < 0.5");
