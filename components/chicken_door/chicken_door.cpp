@@ -40,11 +40,11 @@ void ChickenDoor::control(const cover::CoverCall &call) {
     if ((int)pos==0){
       this->motor.forward();
       this->position = 0;
-      ESP_LOGW("pos = 0");
+      LOG_STR("pos = 0");
     }else{
       this->motor.backward();
       this->position = 1;
-      ESP_LOGW("pos = 1");
+      LOG_STR("pos = 1");
      }
 
      this->publish_state();
