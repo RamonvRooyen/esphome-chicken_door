@@ -1,4 +1,5 @@
 #include "button.h"
+#include <Arduino.h>
 
 void fallbackCallback(){
     Serial.println("No callback set");

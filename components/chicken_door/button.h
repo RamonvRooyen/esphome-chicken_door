@@ -1,7 +1,7 @@
 #pragma once
 #include <optional>
 #include <Arduino.h>
-#include <core/optional.h>
+#include "esphome/core/optional.h"
 
 #if defined(__arm__) || defined(ESP8266) || defined(ESP32)
     #include <functional>
