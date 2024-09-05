@@ -6,9 +6,13 @@ namespace esphome {
 namespace chicken_door {
 
 static const char *TAG = "cover.chicken_door";
-void ChickenDoor() {
-  this->motor = MotorDriver(18, 19, 32, 250);
+
+ChickenDoor::ChickenDoor(const int pin)
+{
+this->motor = MotorDriver(18, 19, 32, 250);
 }
+
+
 void ChickenDoor::setup() {
   pinMode(5, 0x09);
 }
