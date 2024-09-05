@@ -9,6 +9,7 @@ namespace esphome {
  namespace chicken_door {
 
  class ChickenDoor : public cover::Cover, public Component {
+  ChickenDoor();
   public:
    void setup() override;
    void loop() override;
