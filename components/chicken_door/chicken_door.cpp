@@ -39,10 +39,12 @@ void ChickenDoor::control(const cover::CoverCall &call) {
     }
     if ((int)pos==0){
       this->motor.forward();
+      this.position = 0;
     }else{
       this->motor.backward();
+      this.position = 1;
      }
-     this->position = pos;
+
      this->publish_state();
   }
 }
