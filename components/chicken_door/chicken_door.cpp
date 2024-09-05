@@ -34,6 +34,9 @@ cover::CoverTraits ChickenDoor::get_traits() {
 void ChickenDoor::control(const cover::CoverCall &call) {
   if (call.get_position().has_value()) {
     float pos = *call.get_position();
+    ESP_LOGD(TAG, "Received position: %f", pos);
+
+
     if (pos<0.5){
        this->motor.forward();
       this->position = 1.0;
