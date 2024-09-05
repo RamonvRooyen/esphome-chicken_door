@@ -5,7 +5,7 @@
 namespace esphome {
 namespace chicken_door {
 
-static const char *TAG = "chicken_door.cover";
+static const char *TAG = "cover.chicken_door";
 
 void ChickenDoor::setup() {
   this->motor = MotorDriver(18, 19, 32, 250);
