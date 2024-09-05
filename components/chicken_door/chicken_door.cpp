@@ -36,15 +36,15 @@ void ChickenDoor::control(const cover::CoverCall &call) {
     float pos = *call.get_position();
     if (pos<0.5){
        this->motor.forward();
-      this->position = 1;
+      this->position = COVER_OPEN;
        ESP_LOGD(TAG, "pos = 1 < 0.5");
     }else{
        this->motor.backward();
-      this->position = 0;
+      this->position = COVER_CLOSED;
       ESP_LOGD(TAG, "pos = 1");
     }
 
-     this->publish_state(this->position);
+     this->publish_state();
   }
 }
 
