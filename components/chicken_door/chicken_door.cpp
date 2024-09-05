@@ -42,7 +42,7 @@ void ChickenDoor::control(const cover::CoverCall &call) {
     }else{
       this->motor.backward();
      }
-     *call.set_position(pos);
+     this->position = pos;
      this->publish_state();
   }
 }
