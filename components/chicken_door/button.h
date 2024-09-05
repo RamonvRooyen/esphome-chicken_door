@@ -1,6 +1,7 @@
 #pragma once
 #include <optional>
 #include <Arduino.h>
+#include <core/optional.h>
 
 #if defined(__arm__) || defined(ESP8266) || defined(ESP32)
     #include <functional>
@@ -22,6 +23,6 @@ class Button{
     private:
         bool buttonPressed = false;
         int pin;
-        std::optional<fptr> downCallback;
-        std::optional<fptr> upCallback;
+        esphome::optional<fptr> downCallback;
+        esphome::optional<fptr> upCallback;
 };
