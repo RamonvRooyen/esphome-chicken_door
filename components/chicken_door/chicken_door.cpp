@@ -7,7 +7,8 @@ namespace chicken_door {
 
 static const char *TAG = "cover.chicken_door";
 
-ChickenDoor::ChickenDoor(): motor(18, 19, 32, 250)
+ChickenDoor::ChickenDoor(): motor(18, 19, 32, 250){
+  }
 
 void ChickenDoor::setup() {
   pinMode(5, 0x09);
