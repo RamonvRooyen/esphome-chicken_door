@@ -18,7 +18,6 @@ namespace esphome {
   protected:
    void control(const cover::CoverCall &call) override;
    MotorDriver motor;
-   Button button;
  };
 } //namespace empty_light
 } //namespace esphome
