@@ -44,7 +44,7 @@ void ChickenDoor::control(const cover::CoverCall &call) {
       ESP_LOGD(TAG, "pos = 1");
     }
 
-     this->publish_state();
+     this->publish_state(this->position);
   }
 }
 
