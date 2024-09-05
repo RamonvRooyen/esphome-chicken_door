@@ -1,5 +1,4 @@
 #pragma once
-#include <optional>
 #include <Arduino.h>
 #include "esphome/core/optional.h"
 
