@@ -11,7 +11,7 @@ namespace esphome {
  class ChickenDoor : public cover::Cover, public Component {
 
   public:
-  ChickenDoor();
+  ChickenDoor(uint8_t threshold);
    void setup() override;
    void loop() override;
    void dump_config() override;
