@@ -1,5 +1,6 @@
 #include "motor.h"
 #include <Arduino.h>
+#include "esphome/core/log.h"
 
 MotorDriver::MotorDriver(int forwardPin, int backwardPin, int thresholdPin, int thresholdValue)
 {
