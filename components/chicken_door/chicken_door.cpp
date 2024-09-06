@@ -7,7 +7,7 @@ namespace chicken_door {
 
 static const char *TAG = "cover.chicken_door";
 
-ChickenDoor::ChickenDoor(uint8_t threshold): motor(18, 19, 32, threshold){
+ChickenDoor::ChickenDoor(): motor(18, 19, 32, 1000){
   }
 
 void ChickenDoor::setup() {
