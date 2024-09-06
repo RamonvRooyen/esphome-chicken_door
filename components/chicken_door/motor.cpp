@@ -28,7 +28,7 @@ void MotorDriver::loop(){
 
     if (!this->overrideJamDetection && this->shouldStall()){
       if ( this->debug)Serial.println("STALL");
-      this->backward();
+      this->stop();
     }
 
     long millisSinceLastStall = millis() - this->lastStall;
