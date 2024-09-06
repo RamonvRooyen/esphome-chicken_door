@@ -90,6 +90,8 @@ bool MotorDriver::shouldStall(){
      if (this->state != MOTOR_STATE::FORWARD) return false;
   
     int threshold = analogRead(this->thresholdPin);
+    ESP_LOGD(TAG, "threshold", threshold);
+
 
      if (this->debug) Serial.println("Thresh:"+String(threshold));
      if (this->state==MOTOR_STATE::STOPPED) return false;
