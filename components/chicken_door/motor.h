@@ -23,6 +23,8 @@ class MotorDriver {
         int thresholdAvg();
         bool overrideJamDetection = false;
         bool debug = false;
+        int lastThreshold;
+
         
 
     private:
@@ -30,7 +32,6 @@ class MotorDriver {
         int backwardPin;
         int thresholdPin;
         int thresholdValue;
-        int lastThreshold;
         long lastStateChange;
 
         MOTOR_STATE state;

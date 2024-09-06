@@ -114,6 +114,7 @@ void MotorDriver::insertThreshold(int threshold)
     if (diff < THRESHOLD_DELAY) return;
     this->lastThresholdMeasurement = millis();
     this->thresholdIndex++;
+    this->lastThreshold = diff;
     this->thresholds[this->thresholdIndex] = threshold;
     if (this->thresholdIndex >= THRESHOLD_COUNT){
         this->thresholdIndex = 0;

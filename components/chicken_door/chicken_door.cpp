@@ -21,6 +21,8 @@ void ChickenDoor::set_threshold(int threshold) {
 
 void ChickenDoor::loop() {
   this->motor.loop();
+  ESP_LOGD(TAG, "Received thresh: %f", this->motor.lastThreshold);
+
 }
 
 void ChickenDoor::dump_config() {
