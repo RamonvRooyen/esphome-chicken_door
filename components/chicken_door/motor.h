@@ -17,6 +17,7 @@ class MotorDriver {
         void backward();
         void reverse();
         void stop();
+        void setThreshold(int threshold);
     
         MOTOR_STATE getState();
         int thresholdAvg();

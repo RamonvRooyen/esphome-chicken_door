@@ -17,6 +17,10 @@ MotorDriver::MotorDriver(int forwardPin, int backwardPin, int thresholdPin, int 
     pinMode(thresholdPin, INPUT);
 }
 
+void MotorDriver::setThreshold(int value){
+    this->thresholdValue = value;
+}
+
 void MotorDriver::loop(){
     long millisSinceLastStateChange = millis() - this->lastStateChange;
 

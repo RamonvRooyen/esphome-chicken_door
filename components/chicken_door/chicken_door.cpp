@@ -14,6 +14,11 @@ void ChickenDoor::setup() {
   pinMode(5, 0x09);
 }
 
+void ChickenDoor::set_threshold(int threshold) {
+  this->threshold = threshold;
+  this->motor.setThreshold(threshold);
+}
+
 void ChickenDoor::loop() {
   this->motor.loop();
 }

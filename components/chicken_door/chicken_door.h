@@ -17,6 +17,9 @@ namespace esphome {
    void dump_config() override;
    cover::CoverTraits get_traits() override;
 
+   void set_threshold(int threshold);
+  private:
+    int threshold;
   protected:
    void control(const cover::CoverCall &call) override;
    MotorDriver motor;
